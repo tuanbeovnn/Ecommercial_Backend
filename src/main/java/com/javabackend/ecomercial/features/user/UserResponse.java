@@ -1,4 +1,4 @@
-package com.javabackend.ecomercial.payload.request;
+package com.javabackend.ecomercial.features.user;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,20 +11,8 @@ import java.util.Set;
 
 @Getter
 @Setter
-public class SignupRequest {
-
-    @Size(min = 3, max = 20)
-    @NotEmpty(message = "Please provide a name")
+public class UserResponse {
     private String username;
-
-    @NotEmpty(message = "Please provide a email")
-    @Size(max = 50)
-    @Email
     private String email;
-
     private Set<String> role;
-
-    @NotNull(message = "Required")
-    @Size(min = 6, max = 40)
-    private String password;
 }

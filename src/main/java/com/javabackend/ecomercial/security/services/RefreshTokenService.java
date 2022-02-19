@@ -7,7 +7,7 @@ import java.util.UUID;
 import com.javabackend.ecomercial.exception.TokenRefreshException;
 import com.javabackend.ecomercial.repository.RefreshTokenRepository;
 import com.javabackend.ecomercial.repository.UserRepository;
-import com.javabackend.ecomercial.entity.RefreshToken;
+import com.javabackend.ecomercial.domain.entity.RefreshToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class RefreshTokenService {
-    @Value("${bezkoder.app.jwtRefreshExpirationMs}")
+    @Value("${food.app.jwtRefreshExpirationMs}")
     private Long refreshTokenDurationMs;
     @Autowired
     private RefreshTokenRepository refreshTokenRepository;

@@ -1,5 +1,6 @@
 package com.javabackend.ecomercial.advice;
 
+import com.javabackend.ecomercial.exception.ErrorMessage;
 import com.javabackend.ecomercial.exception.TokenRefreshException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
