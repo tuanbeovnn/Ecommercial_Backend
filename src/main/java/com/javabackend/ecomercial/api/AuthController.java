@@ -55,7 +55,7 @@ public class AuthController {
 
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
 
-        String jwt = jwtUtils.generateJwtToken(userDetails);
+        String jwt = jwtUtils.generateToken(userDetails.getUsername());
 
         List<String> roles = userDetails.getAuthorities().stream().map(item -> item.getAuthority())
                 .collect(Collectors.toList());

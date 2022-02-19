@@ -24,9 +24,9 @@ public class JwtUtils {
     @Value("${food.app.jwtExpirationMs}")
     private int jwtExpirationMs;
 
-    public String generateJwtToken(UserDetailsImpl userPrincipal) {
-        return generateToken(userPrincipal.getUsername());
-    }
+//    public String generateJwtToken(UserDetailsImpl userPrincipal) {
+//        return generateToken(userPrincipal.getUsername());
+//    }
 
     public String generateToken(String username) {
         Map<String, Object> claims = new HashMap<>();
